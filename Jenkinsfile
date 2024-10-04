@@ -16,14 +16,18 @@ pipeline {
                 echo 'Test Step: We run testing tool like pytest here'
 
                 # TODO fill out the path to conda here
-                sudo /home/team09/miniconda3/bin/activate mlip
-                # sudo source  /home/team09/miniconda3/bin/activate mlip
+                # sudo /home/team09/miniconda3/bin/activate mlip
+                // sudo source  /home/team09/miniconda3/bin/activate mlip
+                python3.12 -m venv .env
 
                 # TODO Complete the command to run pytest
                 # sudo /home/team09/miniconda3/bin/activate run -n mlip python -m pytest -v
-                pytest --maxfail=1 --disable-warnings
+                # pytest --maxfail=1 --disable-warnings
+                source .env/bin/activate && pip install pytest numpy pandas scikit-learn kafka-python-ng
 
-                echo 'pytest not runned'
+                pytest
+
+                # echo 'pytest not runned'
                 # exit 1 #comment this line after implementing Jenkinsfile
                 '''
 
@@ -37,3 +41,4 @@ pipeline {
         }
     }
 }
+ =
