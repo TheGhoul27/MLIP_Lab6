@@ -23,7 +23,7 @@ pipeline {
                 # TODO Complete the command to run pytest
                 # sudo /home/team09/miniconda3/bin/activate run -n mlip python -m pytest -v
                 # pytest --maxfail=1 --disable-warnings
-                source .env/bin/activate && pip install pytest numpy pandas
+                source .env/bin/activate && pip install pytest numpy pandas scikit-learn
 
                 pytest
 
