@@ -17,11 +17,11 @@ pipeline {
 
                 # TODO fill out the path to conda here
                 # sudo /home/team09/miniconda3/bin/activate init
-                source  /home/team09/miniconda3/bin/activate mlip
+                sudo source  /home/team09/miniconda3/bin/activate mlip
 
                 # TODO Complete the command to run pytest
-                # sudo /home/team09/miniconda3/bin/activate run -n mlip python -m pytest -v
-                pytest --maxfail=1 --disable-warnings
+                sudo /home/team09/miniconda3/bin/activate run -n mlip python -m pytest -v
+                # pytest --maxfail=1 --disable-warnings
 
                 echo 'pytest not runned'
                 # exit 1 #comment this line after implementing Jenkinsfile
